@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./resources/Logo.svg" alt="logo" />
+      </div>
+    </header>
+
+    <main>
+      <section class="section__one">
+        <div class="section__one-containerText">
+          <textarea class="boxText" placeholder="Ingrese el texto aquí"></textarea>
+        </div>
+        <div class="section__one-containerAlert">
+          <img src="./resources/alerta.svg" alt="alerta" />
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="section__one-containerButtons">
+          <button class="btn-primary">Encriptar</button>
+          <button class="btn-secundary">Desencriptar</button>
+        </div>
+      </section>
+
+      <section class="section__two">
+        <div class="section__two-containerDoll">
+          <img src="./resources/Muñeco.svg" alt="muñeco" />
+        </div>
+        <div class="section__two-containerNotFound">
+          <h3>
+            Ningún mensaje fue <br  class="br"/>
+            encontrado
+          </h3>
+          <p>
+            Ingresa el texto que desees encriptar o <br class="br"/> desencriptar.
+          </p>
+        </div>
+        <div class="container__elements">
+          <div class="section__two-containerResults">
+            <p class="textResults"></p>
+          </div>
+          <div class="section__two-containerBtnCopy">
+            <button class="btn-copy">Copiar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
