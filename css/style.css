@@ -183,7 +183,7 @@ main {
 }
 
 /* Inicio Modificaciones para 375px de resolucion */
-@media (width: 375px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
   .logo {
     position: relative;
     top: 25px;
