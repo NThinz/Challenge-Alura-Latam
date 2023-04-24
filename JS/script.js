@@ -1,7 +1,7 @@
 var btnPrimary = document.querySelector(".btn-primary");
 var btnSecundary = document.querySelector(".btn-secundary");
-var doll = document.querySelector(".section__two-containerDoll");
-var containerResults = document.querySelector(".section__two-containerNotFound");
+var div4 = document.querySelector(".div4");
+var div5 = document.querySelector(".div5");
 var textResults = document.querySelector(".textResults");
 
 btnPrimary.onclick = primary;
@@ -9,20 +9,16 @@ btnSecundary.onclick = secundary;
 
 function primary() {
   ocultarAdelante();
-  mostrar();
+  mostrarAdelante();
   var cajatexto = recuperarTexto();
   textResults.textContent = encriptarTexto(cajatexto);
-  resizeOutputContainer();
-  height();
 }
 
 function secundary() {
-  mostrar();
   ocultarAdelante();
+  mostrarAdelante();
   var cajatexto = recuperarTexto();
   textResults.textContent = desencriptarTexto(cajatexto);
-  resizeOutputContainer();
-  height();
 }
 
 function recuperarTexto() {
@@ -31,18 +27,10 @@ function recuperarTexto() {
 }
 
 function ocultarAdelante() {
-  doll.classList.add("ocultar");
-  containerResults.classList.add("ocultar");
+  div4.classList.add("ocultar");
 }
-
-function mostrar() {
-  var btnCopiar = document.querySelector(".btn-copy");
-  btnCopiar.classList.add("mostrar");
-}
-
-function height() {
-  var height = document.querySelector(".section__two");
-  height.classList.add("height");
+function mostrarAdelante() {
+  div5.classList.add("mostrar");
 }
 
 function encriptarTexto(mensaje) {
@@ -105,15 +93,3 @@ btnCopy.addEventListener(
     console.log("hola");
   })
 );
-
-function resizeOutputContainer() {
-  var outputContainer = document.querySelector(".container__elements");
-  outputContainer.style.display = "flex";
-  outputContainer.style.height = "auto";
-  outputContainer.style.width = "auto";
-  outputContainer.style.whiteSpace = "pre-wrap"; // Añade esta línea para permitir saltos de línea
-  outputContainer.style.wordWrap = "break-word"; // Añade esta línea para permitir saltos de línea
-  outputContainer.style.height = outputContainer.scrollHeight + "px";
-  outputContainer.style.width = outputContainer.scrollWidth + "px";
-}
-
